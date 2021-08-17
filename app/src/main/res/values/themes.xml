@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.StudyZoneAdmin" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/tomato_light</item>
+        <item name="colorPrimaryVariant">@color/tomato_v_light</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/tomato_dark</item>
+        <item name="colorSecondaryVariant">@color/tomato_auth</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <!--no app theme -->
+    <style name="noAppBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/tomato_light</item>
+        <item name="colorPrimaryVariant">@color/tomato_v_light</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/tomato_dark</item>
+        <item name="colorSecondaryVariant">@color/tomato_auth</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+<!-- table header style -->
+    <style name="table">
+        <item name="android:layout_width">@dimen/table_width</item>
+        <item name="android:layout_height">@dimen/table_height</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">DOMINICskdfjkfjsfksjfskfjskfjsfkfsjfkjkdjdkj</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="paddingEnd">8dp</item>
+        <item name="paddingStart">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+</resources>

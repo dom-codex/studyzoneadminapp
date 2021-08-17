@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/n_referral_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp22"
+        android:layout_marginTop="@dimen/dp8"
+        android:text="@string/no_referrals"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/n_transaction_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:text="@string/no_transactions"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintStart_toStartOf="@+id/n_referral_label"
+        app:layout_constraintTop_toBottomOf="@+id/n_referral_label" />
+
+    <TextView
+        android:id="@+id/n_earnings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp22"
+        android:text="@string/earnings"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintStart_toStartOf="@+id/n_transaction_label"
+        app:layout_constraintTop_toBottomOf="@+id/n_transaction_label" />
+
+    <TextView
+        android:id="@+id/n_referrals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/bg_jumbo"
+        android:textSize="@dimen/sp24"
+        app:layout_constraintBottom_toBottomOf="@+id/n_referral_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/n_referral_label"
+        app:layout_constraintTop_toTopOf="@+id/n_referral_label"
+        app:layout_constraintVertical_bias="0.5"
+        tools:text="20" />
+
+    <TextView
+        android:id="@+id/n_transactions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sp24"
+        android:text="5"
+        android:textColor="@color/bg_jumbo"
+        android:textSize="@dimen/sp24"
+        app:layout_constraintBottom_toBottomOf="@+id/n_transaction_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/n_transaction_label"
+        app:layout_constraintTop_toTopOf="@+id/n_transaction_label" />
+
+    <TextView
+        android:id="@+id/n_earnings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sp24"
+        android:textColor="@color/bg_jumbo"
+        android:textSize="@dimen/sp24"
+        app:layout_constraintBottom_toBottomOf="@+id/n_earnings_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/n_earnings_label"
+        app:layout_constraintTop_toTopOf="@+id/n_earnings_label"
+        tools:text="100,000#" />
+
+    <Button
+        android:id="@+id/details_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp22"
+        android:layout_marginEnd="@dimen/dp22"
+        android:text="@string/details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/n_earnings" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

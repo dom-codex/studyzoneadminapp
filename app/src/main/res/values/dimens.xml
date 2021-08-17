@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sp26">26sp</dimen>
+    <dimen name="dp32">32dp</dimen>
+    <dimen name="sp18">18sp</dimen>
+    <dimen name="dp18">18dp</dimen>
+    <dimen name="sp20">20sp</dimen>
+    <dimen name="sp24">24sp</dimen>
+    <dimen name="sp32">32sp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp22">22dp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="dp12">12dp</dimen>
+    <dimen name="table_height">30dp</dimen>
+    <dimen name="table_width">180dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="sp22">22sp</dimen>
+</resources>

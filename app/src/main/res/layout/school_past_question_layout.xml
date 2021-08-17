@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/dashboard_bg"
+            app:layout_constraintBottom_toTopOf="@+id/sp_h1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginTop="@dimen/dp22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_apartment_24"
+                app:tint="@color/uba_red" />
+
+            <TextView
+                android:id="@+id/name_of_sch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp24"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                tools:text="Federal university of petroleum effurun" />
+
+            <TextView
+                android:id="@+id/name_of_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintBottom_toBottomOf="@+id/name_of_semester"
+                app:layout_constraintEnd_toStartOf="@+id/name_of_semester"
+                app:layout_constraintTop_toTopOf="@+id/name_of_semester"
+                tools:text="200L" />
+
+            <TextView
+                android:id="@+id/name_of_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintEnd_toEndOf="@+id/name_of_semester"
+                app:layout_constraintStart_toStartOf="@+id/name_of_level"
+                app:layout_constraintTop_toBottomOf="@+id/name_of_semester"
+                tools:text="Chemical Engineering" />
+
+            <TextView
+                android:id="@+id/name_of_semester"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_of_sch"
+                tools:text="Second Semester" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12"
+                android:text="@string/past_question"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp22"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.46"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_of_department"
+                tools:text="past questions(20)" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/sp_h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sp_h1"
+            tools:listitem="@layout/school_past_question_rcv_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp8"
+        android:paddingBottom="@dimen/dp8">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:tint="#00C853"
+                    app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+                <TextView
+                    android:id="@+id/key_val"
+                    style="@style/table" />
+
+                <TextView
+                    android:id="@+id/vendor_val"
+                    style="@style/table" />
+
+                <TextView
+                    android:id="@+id/price_val"
+                    style="@style/table" />
+
+                <TextView
+                    android:id="@+id/is_used_val"
+                    style="@style/table" />
+
+                <TextView
+                    android:id="@+id/used_val"
+                    style="@style/table" />
+            </TableRow>
+
+        </TableLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

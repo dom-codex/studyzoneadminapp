@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"></LinearLayout>
+
+                        <TextView
+                            android:id="@+id/key_col"
+                            style="@style/table"
+                            android:text="@string/keys" />
+
+                        <TextView
+                            android:id="@+id/vendor_col"
+                            style="@style/table"
+                            android:text="@string/vendor" />
+
+                        <TextView
+                            android:id="@+id/price_col"
+                            style="@style/table"
+                            android:text="@string/price" />
+
+                        <TextView
+                            android:id="@+id/is_used_col"
+                            style="@style/table"
+                            android:text="@string/is_used" />
+
+                        <TextView
+                            android:id="@+id/used_by"
+                            style="@style/table"
+                            android:text="@string/used_by" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lisense_keys_rcv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/keys_row_rcv_item" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

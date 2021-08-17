@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#AF0202</color>
+    <color name="tomato_light">#CD1414</color>
+    <color name="tomato_dark">#AF0202</color>
+    <color name="tomato_v_light">#F5AF0202</color>
+    <color name="tomato_auth">#DBAF0202</color>
+    <color name="light">#B0FFFFFF</color>
+    <color name="ash">#333232</color>
+    <color name="container_bg">#CCFBF6F6</color>
+    <color name="bg_jumbo">#F5E80404</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="uba_red">#fe0002</color>
+</resources>
