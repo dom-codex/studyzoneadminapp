@@ -27,7 +27,7 @@
                     android:id="@+id/imageView4"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView16"
+                    app:layout_constraintBottom_toTopOf="@+id/sch_type"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:srcCompat="@drawable/ic_baseline_business_24"
@@ -38,17 +38,18 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp8"
+                    android:text="@string/zero"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp26"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/textView16"
-                    app:layout_constraintStart_toStartOf="@+id/textView16"
-                    app:layout_constraintTop_toBottomOf="@+id/textView16"
+                    app:layout_constraintEnd_toEndOf="@+id/sch_type"
+                    app:layout_constraintStart_toStartOf="@+id/sch_type"
+                    app:layout_constraintTop_toBottomOf="@+id/sch_type"
                     tools:text="235" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/sch_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/universities"
@@ -69,8 +70,10 @@
                 app:layout_constraintGuide_percent="0.3" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/school_rcv"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -81,6 +84,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/sch_search_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"

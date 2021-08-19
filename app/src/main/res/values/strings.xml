@@ -57,4 +57,8 @@
     <string name="emails">Emails</string>
     <string name="support">Support</string>
     <string name="live_chats">Live Chats</string>
+    <string name="zero">0</string>
+    <string name="school_name">school name</string>
+    <string name="school_abbreviation">school abbreviation</string>
+    <string name="create_school">create</string>
 </resources>
