@@ -10,9 +10,63 @@
         <action
             android:id="@+id/action_mainMenuFragment_to_schoolFragment"
             app:destination="@id/schoolFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_transactionsFragment"
+            app:destination="@id/transactionsFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_userFragment"
+            app:destination="@id/userFragment" />
     </fragment>
     <fragment
         android:id="@+id/schoolFragment"
         android:name="com.sparktech.studyzoneadmin.school.SchoolFragment"
-        android:label="SchoolFragment" />
+        android:label="SchoolFragment" >
+        <action
+            android:id="@+id/action_schoolFragment_to_schoolDetails"
+            app:destination="@id/schoolDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolDetails"
+        android:name="com.sparktech.studyzoneadmin.school.SchoolDetails"
+        android:label="SchoolDetails" >
+        <action
+            android:id="@+id/action_schoolDetails_to_schoolDepartmentFragment"
+            app:destination="@id/schoolDepartmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolDepartmentFragment"
+        android:name="com.sparktech.studyzoneadmin.school.SchoolDepartmentFragment"
+        android:label="SchoolDepartmentFragment" >
+        <action
+            android:id="@+id/action_schoolDepartmentFragment_to_schoolLevelFragment"
+            app:destination="@id/schoolLevelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolLevelFragment"
+        android:name="com.sparktech.studyzoneadmin.school.SchoolLevelFragment"
+        android:label="SchoolLevelFragment" >
+        <action
+            android:id="@+id/action_schoolLevelFragment_to_pastQuestionFragment"
+            app:destination="@id/pastQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pastQuestionFragment"
+        android:name="com.sparktech.studyzoneadmin.past_question.PastQuestionFragment"
+        android:label="PastQuestionFragment" />
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.sparktech.studyzoneadmin.transaction.TransactionsFragment"
+        android:label="TransactionsFragment" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.sparktech.studyzoneadmin.user.UserFragment"
+        android:label="UserFragment" >
+        <action
+            android:id="@+id/action_userFragment_to_userDetails"
+            app:destination="@id/userDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetails"
+        android:name="com.sparktech.studyzoneadmin.user.UserDetails"
+        android:label="UserDetails" />
 </navigation>

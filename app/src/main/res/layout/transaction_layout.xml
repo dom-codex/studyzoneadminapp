@@ -77,7 +77,6 @@
                     <TextView
                         android:id="@+id/semester_header"
                         style="@style/table"
-                        android:layout_height="wrap_content"
                         android:text="@string/semester"
                         android:textSize="@dimen/sp20" />
 
@@ -110,13 +109,21 @@
                         style="@style/table"
                         android:text="@string/school"
                         android:textSize="@dimen/sp20" />
+
+                    <TextView
+                        android:id="@+id/user_email_header"
+                        style="@style/table"
+                        android:text="@string/UserEmail"
+                        android:textSize="@dimen/sp20" />
                 </TableRow>
 
             </TableLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tx_table_rcv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="45"
                 tools:listitem="@layout/transaction_table_item" />
         </LinearLayout>

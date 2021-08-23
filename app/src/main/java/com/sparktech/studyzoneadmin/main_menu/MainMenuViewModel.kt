@@ -25,6 +25,7 @@ class MainMenuViewModel : ViewModel() {
     val sliderData = MutableLiveData<SliderData>()
     val schools = MutableLiveData<MutableList<School>>()
     val adapterData = mutableListOf<SchoolAdapterData>()
+
     init {
         fetchSliderDetails()
     }
@@ -64,6 +65,7 @@ class MainMenuViewModel : ViewModel() {
             e.printStackTrace()
         }
     }
+
     override fun onCleared() {
         super.onCleared()
         job.complete()

@@ -1,9 +1,11 @@
 package com.sparktech.studyzoneadmin.school
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -23,7 +25,11 @@ class SchoolAdapter:ListAdapter<SchoolAdapterData,RecyclerView.ViewHolder>(diffU
                 binding.createdAt.text = it.createdAt
                 binding.schAbbr.text = it.nameAbbr
                 binding.root.setOnClickListener { v->
-                    Toast.makeText(v.context,it.name,Toast.LENGTH_SHORT).show()
+                    val bundle = Bundle()
+                    bundle.putString("schName",it.name)
+                    bundle.putString("faculties",it.faculties)
+                    bundle.putString("schHash",it.schHash)
+                    v.findNavController().navigate(R.id.action_schoolFragment_to_schoolDetails,bundle)
                 }
             }
         }

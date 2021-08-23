@@ -9,5 +9,6 @@ data class School(
         val type:String,
         @SerializedName("sid")
         val schHash:String,
-        val createdAt:String
+        val createdAt:String,
+        val faculties:String,
 )

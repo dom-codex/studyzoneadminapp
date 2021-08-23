@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintStart_toEndOf="@+id/person_img"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Dominic ibolo" />
+
+        <TextView
+            android:id="@+id/person_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintStart_toStartOf="@+id/person_name"
+            app:layout_constraintTop_toBottomOf="@+id/person_name"
+            tools:text="test@test.com" />
+
+        <TextView
+            android:id="@+id/person_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintStart_toStartOf="@+id/person_email"
+            app:layout_constraintTop_toBottomOf="@+id/person_email"
+            tools:text="08101063084" />
+
+        <TextView
+            android:id="@+id/person_referred_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintStart_toStartOf="@+id/person_phone"
+            app:layout_constraintTop_toBottomOf="@+id/person_phone"
+            tools:text="referred on 12-02-2021" />
+
+        <ImageView
+            android:id="@+id/person_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12"
+            app:layout_constraintBottom_toBottomOf="@+id/person_referred_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/person_name"
+            app:srcCompat="@drawable/ic_baseline_person_pin_24" />
+
+        <View
+            android:id="@+id/view12"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/person_referred_date" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

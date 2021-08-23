@@ -78,6 +78,7 @@
 
                 <TextView
                     android:id="@+id/department"
+                    style="@style/table"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/sp20" />
 
@@ -89,6 +90,12 @@
 
                 <TextView
                     android:id="@+id/school"
+                    style="@style/table"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/user_email"
                     style="@style/table"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/sp20" />

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pq_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/pq_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintStart_toEndOf="@+id/pq_book_img"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="20/21 che321 pastquestion" />
+
+        <TextView
+            android:id="@+id/pq_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintStart_toStartOf="@+id/pq_title"
+            app:layout_constraintTop_toBottomOf="@+id/pq_title"
+            tools:text="100L" />
+
+        <TextView
+            android:id="@+id/semester_pq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintStart_toStartOf="@+id/pq_level"
+            app:layout_constraintTop_toBottomOf="@+id/pq_level"
+            tools:text="second semester" />
+
+        <TextView
+            android:id="@+id/dept_pq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintStart_toStartOf="@+id/semester_pq"
+            app:layout_constraintTop_toBottomOf="@+id/semester_pq"
+            tools:text="chem.engr" />
+
+        <TextView
+            android:id="@+id/pq_sch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintStart_toStartOf="@+id/semester_pq"
+            app:layout_constraintTop_toBottomOf="@+id/dept_pq"
+            tools:text="fupre" />
+
+        <ImageView
+            android:id="@+id/pq_book_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12"
+            app:layout_constraintBottom_toBottomOf="@+id/pq_sch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pq_title"
+            app:srcCompat="@drawable/ic_baseline_menu_book_24" />
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp12"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pq_sch" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

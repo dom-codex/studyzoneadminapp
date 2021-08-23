@@ -52,6 +52,12 @@ class MainMenuAdapter:ListAdapter<com.sparktech.studyzoneadmin.models.Categories
                     bundle.putString("schoolType",categories.name)
                     it.findNavController().navigate(R.id.action_mainMenuFragment_to_schoolFragment,bundle)
                 }
+                "Transactions"->{
+                    it.findNavController().navigate(R.id.action_mainMenuFragment_to_transactionsFragment)
+                }
+                "Students"->{
+                    it.findNavController().navigate(R.id.action_mainMenuFragment_to_userFragment)
+                }
             }
         }
     }

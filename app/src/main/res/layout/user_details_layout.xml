@@ -11,9 +11,9 @@
 
         <ImageView
             android:id="@+id/user_img"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="@dimen/dp32"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/dp22"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +114,7 @@
             app:tint="#00C853" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/activated_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/activated"
@@ -135,23 +135,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/ud_h1">
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Downloads" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="referrals" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="transactions" />
-        </com.google.android.material.tabs.TabLayout>
+            app:layout_constraintTop_toTopOf="@+id/ud_h1"/>
 
         <ImageView
             android:id="@+id/logged_in"

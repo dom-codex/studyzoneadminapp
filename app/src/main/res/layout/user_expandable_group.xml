@@ -10,7 +10,7 @@
         android:paddingBottom="@dimen/dp8">
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/name_user"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp8"
@@ -22,23 +22,23 @@
             tools:text="Dominic ibolo" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/email_user"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="test@test.com"
             android:textSize="@dimen/sp20"
-            app:layout_constraintEnd_toEndOf="@+id/textView11"
-            app:layout_constraintStart_toStartOf="@+id/textView11"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintEnd_toEndOf="@+id/name_user"
+            app:layout_constraintStart_toStartOf="@+id/name_user"
+            app:layout_constraintTop_toBottomOf="@+id/name_user" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/phone_user"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="@dimen/sp18"
-            app:layout_constraintEnd_toEndOf="@+id/textView12"
-            app:layout_constraintStart_toStartOf="@+id/textView12"
-            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            app:layout_constraintEnd_toEndOf="@+id/email_user"
+            app:layout_constraintStart_toStartOf="@+id/email_user"
+            app:layout_constraintTop_toBottomOf="@+id/email_user"
             tools:text="08101063084" />
 
         <ImageView
@@ -46,9 +46,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp18"
-            app:layout_constraintBottom_toBottomOf="@+id/textView13"
+            app:layout_constraintBottom_toBottomOf="@+id/phone_user"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView11"
+            app:layout_constraintTop_toTopOf="@+id/name_user"
             app:srcCompat="@drawable/ic_baseline_perm_identity_24" />
+
+        <View
+            android:id="@+id/view9"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_user" />
+
+        <include
+            android:id="@+id/user_details_include"
+            layout="@layout/user_expandable_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view9"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/view10"
+            android:layout_width="wrap_content"
+            android:layout_height="0.6dp"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_details_include" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

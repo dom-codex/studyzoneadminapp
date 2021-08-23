@@ -116,7 +116,7 @@ class BottomFragment:BottomSheetDialogFragment() {
                 Log.i("RESPONSE",res.toString())
                 withContext(Dispatchers.Main){
                     val data = res.data
-                    val school = School(data.name,data.nameAbbr,data.icon,data.type,data.sid,data.createdAt)
+                    val school = School(data.name,data.nameAbbr,data.icon,data.type,data.sid,data.createdAt,0.toString())
                     vm.notifyNewSchool(school)
                     dismissAllowingStateLoss()
                 }

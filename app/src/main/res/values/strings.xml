@@ -61,4 +61,5 @@
     <string name="school_name">school name</string>
     <string name="school_abbreviation">school abbreviation</string>
     <string name="create_school">create</string>
+    <string name="UserEmail" >userEmail</string>
 </resources>
