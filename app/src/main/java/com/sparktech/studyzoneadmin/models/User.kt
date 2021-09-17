@@ -11,5 +11,7 @@ data class User(
     val isLoggedIn: Boolean,
     val noOfReferral: Int,
     val totalEarned: Int,
-    val transactions: Int
+    val transactions: Int,
+    val isBlocked:Boolean,
+    val isLoading:Boolean = false
 )

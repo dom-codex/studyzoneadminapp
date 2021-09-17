@@ -5,10 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.sparktech.studyzoneadmin.databinding.LoadingRcvBinding
 import com.sparktech.studyzoneadmin.databinding.TransactionTableItemBinding
 import com.sparktech.studyzoneadmin.models.Transaction
-
-class TransactionsAdapter:ListAdapter<Transaction,TransactionsAdapter.ViewHolder>(diffUtil) {
+private const val LOADER_ITEM = 0
+private const val ITEM_VIEW = 1
+class TransactionsAdapter:ListAdapter<Transaction,RecyclerView.ViewHolder>(diffUtil) {
     inner class ViewHolder(val binding:TransactionTableItemBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(transaction: Transaction){
             binding.amountValue.text = transaction.amount.toString()
@@ -38,13 +40,29 @@ class TransactionsAdapter:ListAdapter<Transaction,TransactionsAdapter.ViewHolder
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun getItemViewType(position: Int): Int {
+        super.getItemViewType(position)
+        val data = getItem(position)
+        if(data.isLoading){
+            return LOADER_ITEM
+        }
+        return ITEM_VIEW
+    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
+        if(viewType == ITEM_VIEW){
         return  ViewHolder(TransactionTableItemBinding.inflate(inflater,parent,false))
+        }else{
+            return LoaderViewHolder(LoadingRcvBinding.inflate(inflater,parent,false))
+        }
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val transaction = getItem(position)
-        holder.bind(transaction)
+        if(holder is ViewHolder){
+            holder.bind(transaction)
+        }
+
     }
 }
+class LoaderViewHolder(private val binding:LoadingRcvBinding):RecyclerView.ViewHolder(binding.root){}

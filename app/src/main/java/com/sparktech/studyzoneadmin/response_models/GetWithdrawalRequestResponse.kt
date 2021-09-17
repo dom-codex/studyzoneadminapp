@@ -2,4 +2,8 @@ package com.sparktech.studyzoneadmin.response_models
 
 import com.sparktech.studyzoneadmin.models.WithdrawalRequest
 
-data class GetWithdrawalRequestResponse(val requests:List<WithdrawalRequest>)
+data class GetWithdrawalRequestResponse(
+    val requests: List<WithdrawalRequest>,
+    val code: Int,
+    val message: String?
+)

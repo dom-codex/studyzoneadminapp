@@ -82,6 +82,7 @@ class BottomFragment:BottomSheetDialogFragment() {
             }else{
                 //kick user out
             }
+            dismissAllowingStateLoss()
 
         }
         binding.schAbInput.addTextChangedListener(object :TextWatcher{
@@ -108,20 +109,24 @@ class BottomFragment:BottomSheetDialogFragment() {
         })
     }
     private fun createSchool(name:String,abbr:String,email:String,admin:String,type:String){
-        Toast.makeText(requireContext(),type,Toast.LENGTH_SHORT).show()
         val newSchool = NewSchool(email,name,abbr,admin,type)
+        vm.setCreatingSchool(true,type)
         CoroutineScope(Dispatchers.IO).launch{
             try{
             val res = Network.apiService.createSchool(newSchool)
-                Log.i("RESPONSE",res.toString())
                 withContext(Dispatchers.Main){
                     val data = res.data
                     val school = School(data.name,data.nameAbbr,data.icon,data.type,data.sid,data.createdAt,0.toString())
                     vm.notifyNewSchool(school)
+                    vm.setCreatingSchool(false,type)
                     dismissAllowingStateLoss()
+
                 }
             }catch (e:Exception){
                 e.printStackTrace()
+                withContext(Dispatchers.Main){
+                    vm.setCreatingSchool(false,type)
+                }
             }
         }
     }

@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/linearLayoutCompat"
+        android:id="@+id/withdrawal_controller_cont"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp8"
@@ -50,7 +50,7 @@
             app:tint="#304FFE" />
 
         <TextView
-            android:id="@+id/textView44"
+            android:id="@+id/testimony_link"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:paddingStart="@dimen/dp12"
@@ -71,5 +71,6 @@
             android:textSize="@dimen/sp18"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

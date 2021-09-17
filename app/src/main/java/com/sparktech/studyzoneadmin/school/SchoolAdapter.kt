@@ -2,15 +2,13 @@ package com.sparktech.studyzoneadmin.school
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.sparktech.studyzoneadmin.R
-import com.sparktech.studyzoneadmin.databinding.ActivityMainBinding.inflate
+import com.sparktech.studyzoneadmin.databinding.LoadingRcvBinding
 import com.sparktech.studyzoneadmin.databinding.SchoolRcvItemBinding
 import com.sparktech.studyzoneadmin.models.School
 import com.sparktech.studyzoneadmin.models.SchoolAdapterData
@@ -34,7 +32,7 @@ class SchoolAdapter:ListAdapter<SchoolAdapterData,RecyclerView.ViewHolder>(diffU
             }
         }
     }
-    inner class LoadingViewHolder(val binding:SchoolRcvItemBinding):RecyclerView.ViewHolder(binding.root){}
+    inner class LoadingViewHolder(val binding:LoadingRcvBinding):RecyclerView.ViewHolder(binding.root){}
     companion object{
         val diffUtil = object:DiffUtil.ItemCallback<SchoolAdapterData>(){
             override fun areItemsTheSame(oldItem: SchoolAdapterData, newItem: SchoolAdapterData): Boolean {
@@ -48,28 +46,28 @@ class SchoolAdapter:ListAdapter<SchoolAdapterData,RecyclerView.ViewHolder>(diffU
         }
 
         }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         if(viewType == ITEM_VIEW){
             return ViewHolder(SchoolRcvItemBinding.inflate(inflater,parent,false))
         }
-        return LoadingViewHolder(SchoolRcvItemBinding.inflate(inflater,parent,false))
+        return LoadingViewHolder(LoadingRcvBinding.inflate(inflater,parent,false))
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         //check instance of view holder
         val data = getItem(position)
-        val n = holder as ViewHolder
-        n.bind(data.school)
+        if(holder is ViewHolder){
+            holder.bind(data.school)
+        }
     }
 
     override fun getItemViewType(position: Int): Int {
          super.getItemViewType(position)
         val data = getItem(position)
-        if(data.school != null){
-            return ITEM_VIEW
+        if(data.isLoading){
+            return LOADER_VIEW
         }
-        return LOADER_VIEW
+        return ITEM_VIEW
     }
 }

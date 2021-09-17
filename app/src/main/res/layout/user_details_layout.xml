@@ -13,11 +13,10 @@
             android:id="@+id/user_img"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="@dimen/dp22"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_marginStart="@dimen/dp12"
+            app:layout_constraintBottom_toBottomOf="@+id/phone_no"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/user_name"
             app:srcCompat="@drawable/ic_baseline_person_pin_24"
             app:tint="@color/bg_jumbo" />
 
@@ -25,12 +24,12 @@
             android:id="@+id/email_img"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            app:tint="@color/bg_jumbo"
             app:layout_constraintBottom_toBottomOf="@+id/email_value"
-            app:layout_constraintEnd_toStartOf="@+id/email_value"
+            app:layout_constraintStart_toStartOf="@+id/user_name"
             app:layout_constraintTop_toTopOf="@+id/email_value"
             app:layout_constraintVertical_bias="0.5"
-            app:srcCompat="@drawable/ic_baseline_mail_24" />
+            app:srcCompat="@drawable/ic_baseline_mail_24"
+            app:tint="@color/bg_jumbo" />
 
         <ImageView
             android:id="@+id/phone_img"
@@ -45,13 +44,13 @@
 
         <TextView
             android:id="@+id/email_value"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp8"
+            android:paddingStart="@dimen/dp8"
             android:textSize="@dimen/sp20"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/email_img"
             app:layout_constraintTop_toBottomOf="@+id/user_name"
             tools:text="test@test.com" />
 
@@ -59,24 +58,24 @@
             android:id="@+id/user_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp8"
-            android:textAlignment="center"
+            android:layout_marginStart="@dimen/dp12"
+            android:layout_marginTop="21dp"
             android:textSize="@dimen/sp26"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_img"
+            app:layout_constraintStart_toEndOf="@+id/user_img"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="Dominic west" />
 
         <TextView
             android:id="@+id/phone_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dp8"
+            android:paddingStart="@dimen/dp8"
             android:textSize="@dimen/sp20"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/email_value"
-            app:layout_constraintTop_toBottomOf="@+id/user_name"
+            app:layout_constraintStart_toStartOf="@+id/email_value"
+            app:layout_constraintTop_toBottomOf="@+id/email_value"
             tools:text="08101063084" />
 
         <ImageView
@@ -93,21 +92,19 @@
             android:id="@+id/money_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp22"
+            android:layout_marginTop="@dimen/dp18"
             android:textSize="@dimen/sp20"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phone_no"
-            tools:text="20,000 #" />
+            tools:text="20,000000000 #" />
 
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
             android:layout_marginTop="@dimen/dp16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/money_value"
             app:srcCompat="@drawable/ic_baseline_verified_user_24"
@@ -117,17 +114,19 @@
             android:id="@+id/activated_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:text="@string/activated"
             app:layout_constraintBottom_toBottomOf="@+id/imageView7"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
-            app:layout_constraintTop_toTopOf="@+id/imageView7" />
+            app:layout_constraintTop_toTopOf="@+id/imageView7"
+            app:layout_constraintVertical_bias="0.5" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/ud_h1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.52" />
+            app:layout_constraintGuide_percent="0.46" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout2"
@@ -141,13 +140,12 @@
             android:id="@+id/logged_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
             android:layout_marginTop="@dimen/dp16"
-            app:tint="#FFAB00"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/activated_text"
             app:layout_constraintTop_toBottomOf="@+id/money_value"
-            app:srcCompat="@drawable/ic_baseline_login_24" />
+            app:srcCompat="@drawable/ic_baseline_login_24"
+            app:tint="#FFAB00" />
 
         <TextView
             android:id="@+id/logged_in_txt"
@@ -167,10 +165,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tabLayout2" />
+
+        <ImageView
+            android:id="@+id/device_id_img"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="@dimen/dp12"
+            app:tint="#FF6D00"
+            app:layout_constraintStart_toStartOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            app:srcCompat="@drawable/ic_baseline_screen_lock_portrait_24" />
+
+        <TextView
+            android:id="@+id/device_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8"
+            app:layout_constraintBottom_toBottomOf="@id/device_id_img"
+            app:layout_constraintStart_toEndOf="@+id/device_id_img"
+            app:layout_constraintTop_toTopOf="@id/device_id_img"
+            tools:text="sdksldkslksldksldklsdkslksdlksdls" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/search_fab"
+        android:id="@+id/user_more_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"

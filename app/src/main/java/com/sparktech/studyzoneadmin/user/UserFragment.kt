@@ -29,9 +29,6 @@ class UserFragment:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         vm = ViewModelProvider(requireActivity()).get(UsersViewModel::class.java)
-        val sp = requireContext().getSharedPreferences("AdminDetails",Context.MODE_PRIVATE)
-        val adminId = sp.getString("adminId","")
-        vm.fetchSchool(adminId!!)
         val pagerAdapter = UsersTabFragmentAdapter(this)
         binding.userPager.adapter = pagerAdapter
         TabLayoutMediator(binding.userTab,binding.userPager){tab,pos->

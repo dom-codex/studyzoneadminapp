@@ -72,9 +72,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView37"
+                android:id="@+id/request_value"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dp12"
                 android:gravity="center_vertical"
                 android:paddingStart="@dimen/dp8"
                 android:paddingEnd="@dimen/dp8"
@@ -83,7 +84,7 @@
                 android:textSize="@dimen/sp18"
                 app:layout_constraintBottom_toBottomOf="@+id/textView36"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView36"
+                app:layout_constraintStart_toEndOf="@+id/request_spinner"
                 app:layout_constraintTop_toTopOf="@+id/textView36"
                 tools:text="200" />
 
@@ -97,16 +98,32 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
-            <ExpandableListView
-                android:id="@+id/withdrawalexp"
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/request_tab"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <Spinner
+                android:id="@+id/request_spinner"
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12"
+                app:layout_constraintBottom_toBottomOf="@+id/textView36"
+                app:layout_constraintStart_toEndOf="@+id/textView36"
+                app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/request_pager"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view7"
-                tools:listfooter="@layout/withdrawal_expandable_group_item"
-                tools:listitem="@layout/withdrawal_requests_expandable_group" />
+                app:layout_constraintTop_toBottomOf="@+id/request_tab" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -127,6 +127,22 @@
             android:backgroundTint="@color/uba_red"
             android:src="@drawable/ic_baseline_add_24"
             android:tint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/new_level_loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#A40C0C0C"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="#FFFFFF" />
+        </LinearLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </layout>

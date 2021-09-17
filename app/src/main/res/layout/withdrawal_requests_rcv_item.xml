@@ -12,13 +12,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp32"
-            app:layout_constraintBottom_toBottomOf="@+id/textView40"
+            app:layout_constraintBottom_toBottomOf="@+id/requested_date_label"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView38"
+            app:layout_constraintTop_toTopOf="@+id/requestee_name"
             app:srcCompat="@drawable/ic_baseline_person_24" />
 
         <TextView
-            android:id="@+id/textView38"
+            android:id="@+id/requestee_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp8"
@@ -32,37 +32,38 @@
             tools:text="John Doe" />
 
         <TextView
-            android:id="@+id/textView39"
+            android:id="@+id/requestee_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp8"
             android:textSize="@dimen/sp20"
-            app:layout_constraintStart_toStartOf="@+id/textView38"
-            app:layout_constraintTop_toBottomOf="@+id/textView38"
+            app:layout_constraintStart_toStartOf="@+id/requestee_name"
+            app:layout_constraintTop_toBottomOf="@+id/requestee_name"
             tools:text="test@test.com" />
 
         <TextView
-            android:id="@+id/textView40"
+            android:id="@+id/requested_date_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/requested_date"
             android:textSize="@dimen/sp18"
             android:textStyle="italic"
-            app:layout_constraintStart_toStartOf="@+id/textView38"
-            app:layout_constraintTop_toBottomOf="@+id/textView39" />
+            app:layout_constraintStart_toStartOf="@+id/requestee_name"
+            app:layout_constraintTop_toBottomOf="@+id/requestee_email" />
 
         <TextView
-            android:id="@+id/textView41"
-            android:layout_width="wrap_content"
+            android:id="@+id/requested_date"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/dp8"
             android:textSize="@dimen/sp18"
-            app:layout_constraintBottom_toBottomOf="@+id/textView40"
-            app:layout_constraintStart_toEndOf="@+id/textView40"
+            app:layout_constraintBottom_toBottomOf="@+id/requested_date_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/requested_date_label"
             tools:text="2021-12-21" />
 
         <TextView
-            android:id="@+id/textView42"
+            android:id="@+id/requested_amount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingEnd="@dimen/dp8"
@@ -70,11 +71,22 @@
             android:textColor="#DD2C00"
             android:textSize="@dimen/sp20"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView40"
+            app:layout_constraintBottom_toBottomOf="@+id/requested_date_label"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView39"
-            app:layout_constraintTop_toTopOf="@+id/textView38"
+            app:layout_constraintStart_toEndOf="@+id/requestee_email"
+            app:layout_constraintTop_toTopOf="@+id/requestee_name"
             app:layout_constraintVertical_bias="0.5"
             tools:text="#20,000" />
+
+        <include
+            android:id="@+id/withdrawal_request_controller"
+            layout="@layout/withdrawal_expandable_group_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/requested_date_label" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

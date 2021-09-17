@@ -10,5 +10,7 @@ data class WithdrawalRequest(
     val createdAt:String,
     @SerializedName("wid")
     val hash:String,
-    val attendedTo:Boolean
+    val status:String,
+    val videoLink:String?,
+    val isLoading:Boolean= false
 )

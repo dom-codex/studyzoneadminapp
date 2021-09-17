@@ -6,21 +6,19 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class UserDetailsTabFragmentAdapter(fragment: Fragment, val bundle: Bundle) : FragmentStateAdapter(fragment) {
     override fun getItemCount(): Int {
-        return 3
+        return 2
     }
 
     override fun createFragment(position: Int): Fragment {
          return when (position) {
-            0 -> UserDownloadsTabFragment().apply {
+
+            1 -> UserTransactionTabFragment().apply {
                 arguments = bundle
             }
-            1 -> UserReferralTabFragment().apply {
+            0-> UserReferralTabFragment().apply {
                 arguments = bundle
             }
-            2 -> UserTransactionTabFragment().apply {
-                arguments = bundle
-            }
-            else -> UserDownloadsTabFragment().apply {
+            else -> UserReferralTabFragment().apply {
                 arguments = bundle
             }
         }

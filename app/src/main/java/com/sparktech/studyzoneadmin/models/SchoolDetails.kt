@@ -8,5 +8,6 @@ data class SchoolDetails(
     val name:String,
     val createdAt:String,
     @SerializedName("children")
-    val departments:String
+    val departments:String,
+    val isLoading:Boolean = false
 )

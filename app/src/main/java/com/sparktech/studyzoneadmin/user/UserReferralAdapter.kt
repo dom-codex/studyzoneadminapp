@@ -5,12 +5,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.sparktech.studyzoneadmin.databinding.LoadingRcvBinding
 import com.sparktech.studyzoneadmin.databinding.TabItemPersonBinding
 import com.sparktech.studyzoneadmin.models.Referral
 
-class UserReferralAdapter:ListAdapter<Referral,UserReferralAdapter.ViewHolder>(diffUtil) {
-    inner class ViewHolder(val binding:TabItemPersonBinding):RecyclerView.ViewHolder(binding.root){
-        fun bind(referral:Referral){
+private const val ITEM_VIEW = 0
+private const val LOADER_VIEW = 1
+
+class UserReferralAdapter : ListAdapter<Referral, RecyclerView.ViewHolder>(diffUtil) {
+    inner class ViewHolder(val binding: TabItemPersonBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(referral: Referral) {
             binding.apply {
                 personName.text = referral.name
                 personEmail.text = referral.email
@@ -19,8 +24,9 @@ class UserReferralAdapter:ListAdapter<Referral,UserReferralAdapter.ViewHolder>(d
             }
         }
     }
-    companion object{
-        val diffUtil = object:DiffUtil.ItemCallback<Referral>(){
+
+    companion object {
+        val diffUtil = object : DiffUtil.ItemCallback<Referral>() {
             override fun areItemsTheSame(oldItem: Referral, newItem: Referral): Boolean {
                 return oldItem === newItem
             }
@@ -31,13 +37,29 @@ class UserReferralAdapter:ListAdapter<Referral,UserReferralAdapter.ViewHolder>(d
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val inflater  = LayoutInflater.from(parent.context)
-        return ViewHolder(TabItemPersonBinding.inflate(inflater,parent,false))
+    override fun getItemViewType(position: Int): Int {
+        super.getItemViewType(position)
+        val data = getItem(position)
+        if (data.isLoading) {
+            return LOADER_VIEW
+        }
+        return ITEM_VIEW
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        if (viewType == ITEM_VIEW) {
+            return ViewHolder(TabItemPersonBinding.inflate(inflater, parent, false))
+        }
+        return LoaderViewHolder(LoadingRcvBinding.inflate(inflater, parent, false))
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val referral = getItem(position)
-        holder.bind(referral)
+        if (holder is ViewHolder) {
+            holder.bind(referral)
+        }
     }
 }
+
+class LoaderViewHolder(val binding: LoadingRcvBinding) : RecyclerView.ViewHolder(binding.root) {}

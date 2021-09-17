@@ -7,8 +7,10 @@ data class LisenseKey(
         @SerializedName("forWhom")
         val vendor:String?,
         @SerializedName("worth")
-        val price:Float,
+        var price:Float,
         val isUsed:Boolean,
         val usedBy:String?,
-        val createdAt:String
+        val createdAt:String,
+        val keyId:String,
+        val isLoading:Boolean = false
 )

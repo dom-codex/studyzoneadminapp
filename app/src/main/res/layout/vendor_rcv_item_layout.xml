@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/vendor_sn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="@dimen/dp8"
+            android:background="@drawable/bg_round_orange"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/vendor_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/vendor_name"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/vendor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp12"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintStart_toEndOf="@+id/vendor_sn"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Dominic ibolo" />
+
+        <TextView
+            android:id="@+id/vendor_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/vendor_name"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_name"
+            tools:text="wwk330934-3wwoeped-34op4op" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

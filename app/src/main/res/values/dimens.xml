@@ -16,4 +16,5 @@
     <dimen name="table_width">180dp</dimen>
     <dimen name="dp50">50dp</dimen>
     <dimen name="sp22">22sp</dimen>
+    <dimen name="dp4">4dp</dimen>
 </resources>

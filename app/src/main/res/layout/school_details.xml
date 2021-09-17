@@ -6,113 +6,135 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/dashboard_bg"
-            app:layout_constraintBottom_toTopOf="@+id/sd_h1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="32dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/dashboard_bg"
+                app:layout_constraintBottom_toTopOf="@+id/sd_h1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_school_24"
-                app:tint="@color/uba_red" />
+                app:layout_constraintVertical_bias="0.0">
 
-            <TextView
-                android:id="@+id/school_details_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp22"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView5"
-                tools:text="Federal university of petroleum resources effurun" />
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_school_24"
+                    app:tint="@color/uba_red" />
 
-            <TextView
-                android:id="@+id/school_details_number"
+                <TextView
+                    android:id="@+id/school_details_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp22"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                    tools:text="Federal university of petroleum resources effurun" />
+
+                <TextView
+                    android:id="@+id/school_details_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="230"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp20"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/school_details_title"
+                    app:layout_constraintEnd_toEndOf="@+id/school_details_title"
+                    app:layout_constraintStart_toStartOf="@+id/school_details_title" />
+
+                <TextView
+                    android:id="@+id/school_details_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="42dp"
+                    android:text="@string/faculty_plural"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/school_details_name" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/sd_h1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="230"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp20"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/school_details_title"
-                app:layout_constraintEnd_toEndOf="@+id/school_details_title"
-                app:layout_constraintStart_toStartOf="@+id/school_details_title" />
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4" />
 
             <TextView
-                android:id="@+id/school_details_title"
+                android:id="@+id/school_details_title_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="42dp"
+                android:layout_marginTop="@dimen/dp16"
                 android:text="@string/faculty_plural"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp20"
+                android:textSize="@dimen/sp24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/school_details_name" />
+                app:layout_constraintTop_toTopOf="@+id/sd_h1" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp8"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/school_details_title_main" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/school_details_rcv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                tools:listitem="@layout/school_details_item" />
+
+            <ProgressBar
+                android:id="@+id/loading_faculty"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/school_details_title_main" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/sd_h1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.4" />
-
-        <TextView
-            android:id="@+id/school_details_title_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp16"
-            android:text="@string/faculty_plural"
-            android:textSize="@dimen/sp24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/sd_h1" />
-
-        <View
-            android:id="@+id/view3"
-            android:layout_width="wrap_content"
-            android:layout_height="0.5dp"
-            android:layout_marginTop="@dimen/dp8"
-            android:background="@android:color/darker_gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/school_details_title_main" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/school_details_rcv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view3"
-            tools:listitem="@layout/school_details_item" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/add_faculty_btn"
@@ -124,6 +146,23 @@
             android:backgroundTint="@color/uba_red"
             android:src="@drawable/ic_baseline_add_24"
             android:tint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/sch_details_loader_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8A070707"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="#FFFFFF" />
+        </LinearLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </layout>

@@ -17,11 +17,11 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/imageButton5"
+                    android:id="@+id/key_edit_btn"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:tint="#00C853"
+                    app:tint="#00C853"
                     app:srcCompat="@drawable/ic_baseline_edit_24" />
 
                 <TextView

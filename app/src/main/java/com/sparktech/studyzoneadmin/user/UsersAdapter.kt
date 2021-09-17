@@ -31,6 +31,7 @@ class UsersAdapter : ListAdapter<User,UsersAdapter.ViewHolder>(diffUtil) {
                  bundle.putString("earnings",user.totalEarned.toString())
                 bundle.putBoolean("loggedIn",user.isLoggedIn)
                  bundle.putBoolean("activated",user.isActivated)
+                bundle.putBoolean("isBlocked",user.isBlocked)
                 it.findNavController().navigate(R.id.action_userFragment_to_userDetails,bundle)
             }
             binding.root.setOnClickListener {
@@ -62,7 +63,10 @@ class UsersAdapter : ListAdapter<User,UsersAdapter.ViewHolder>(diffUtil) {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val user = getItem(position)
-        holder.bind(user)
+        if(position <this.currentList.size){
+            val user = getItem(position)
+            holder.bind(user)
+        }
+
     }
 }

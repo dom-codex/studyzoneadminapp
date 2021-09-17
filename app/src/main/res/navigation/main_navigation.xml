@@ -16,6 +16,27 @@
         <action
             android:id="@+id/action_mainMenuFragment_to_userFragment"
             app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_withdrawalRequestFragment"
+            app:destination="@id/withdrawalRequestFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_chatListFragment"
+            app:destination="@id/chatListFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_annoucementFragment"
+            app:destination="@id/annoucementFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_vendorFragment"
+            app:destination="@id/vendorFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_lisenseKeyFragment"
+            app:destination="@id/lisenseKeyFragment" />
     </fragment>
     <fragment
         android:id="@+id/schoolFragment"
@@ -69,4 +90,40 @@
         android:id="@+id/userDetails"
         android:name="com.sparktech.studyzoneadmin.user.UserDetails"
         android:label="UserDetails" />
+    <fragment
+        android:id="@+id/withdrawalRequestFragment"
+        android:name="com.sparktech.studyzoneadmin.withdrawal_request.WithdrawalRequestFragment"
+        android:label="WithdrawalRequestFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.sparktech.studyzoneadmin.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.sparktech.studyzoneadmin.live_support.ChatListFragment"
+        android:label="ChatListFragment" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.sparktech.studyzoneadmin.notification.NotificationFragment"
+        android:label="NotificationFragment" />
+    <fragment
+        android:id="@+id/annoucementFragment"
+        android:name="com.sparktech.studyzoneadmin.annnouncement.AnnoucementFragment"
+        android:label="AnnoucementFragment" />
+    <fragment
+        android:id="@+id/lisenseKeyFragment"
+        android:name="com.sparktech.studyzoneadmin.lisense_key.LisenseKeyFragment"
+        android:label="LisenseKeyFragment" />
+    <fragment
+        android:id="@+id/vendorFragment"
+        android:name="com.sparktech.studyzoneadmin.vendor.VendorFragment"
+        android:label="VendorFragment" >
+        <action
+            android:id="@+id/action_vendorFragment_to_vendorStatisticsFragment"
+            app:destination="@id/vendorStatisticsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vendorStatisticsFragment"
+        android:name="com.sparktech.studyzoneadmin.vendor.VendorStatisticsFragment"
+        android:label="VendorStatisticsFragment" />
 </navigation>

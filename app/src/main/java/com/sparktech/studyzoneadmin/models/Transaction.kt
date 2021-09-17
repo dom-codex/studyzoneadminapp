@@ -14,7 +14,8 @@ data class Transaction(
         val school:TransactionSchoolInfo?,
         val faculty: TransactionFacultyInfo?,
         val department:TransactionDeptInfo?,
-        val level:TransactionLevelInfo?
+        val level:TransactionLevelInfo?,
+        val isLoading:Boolean = false
         )
 data class TransactionSchoolInfo(val name:String,val sid:String)
 data class TransactionFacultyInfo(val name:String,val fid:String)

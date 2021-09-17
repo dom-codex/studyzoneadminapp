@@ -7,4 +7,5 @@ data class Department(
     @SerializedName("did")
     val hash:String,
     val createdAt:String,
+    val isLoading:Boolean = false
 )

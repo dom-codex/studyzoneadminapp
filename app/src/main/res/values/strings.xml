@@ -8,7 +8,7 @@
     <string name="login">Login</string>
     <string name="dashboard">Dashboard</string>
     <string name="student">Student</string>
-    <string name="universities" >Universities</string>
+    <string name="universities">Universities</string>
     <string name="user">Users</string>
     <string name="all">All</string>
     <string name="non_activated">Not Activated</string>
@@ -61,5 +61,53 @@
     <string name="school_name">school name</string>
     <string name="school_abbreviation">school abbreviation</string>
     <string name="create_school">create</string>
-    <string name="UserEmail" >userEmail</string>
+    <string name="UserEmail">userEmail</string>
+    <string name="course_title">Course Title</string>
+    <string name="upload_pq_label">Upload Past Question</string>
+    <string name="select_pq">Select Pastquestion</string>
+    <string name="upload">Upload</string>
+    <string name="start_year">Start Year</string>
+    <string name="end_year">Session End Year</string>
+    <string name="Name">name</string>
+    <string name="create">Create</string>
+    <string name="send_notification">Post Notification</string>
+    <string name="suspend_text">Suspend</string>
+    <string name="select_action">Select Action</string>
+    <string name="new_notification">New Notification</string>
+    <string name="subject_label">Subject</string>
+    <string name="enter_message">Message</string>
+    <string name="post">Post</string>
+    <string name="message">message</string>
+    <string name="options">Options</string>
+    <string name="max_withdrawal">withdrawal amount(max)</string>
+    <string name="min_withdrawal">withdrawal amount(min)</string>
+    <string name="referral_earnings">Referral Earnings</string>
+    <string name="free_trial">Free trial Available</string>
+    <string name="admin">Admin</string>
+    <string name="logout_text">Logout</string>
+    <string name="no_data">No Data</string>
+    <string name="updating">Updating...</string>
+    <string name="deleting">deleting...</string>
+    <string name="set_pricing">Set Pricing</string>
+    <string name="edit_price">Edit Price</string>
+    <string name="delete">Delete</string>
+    <string name="generate_key_label">Generate Lisense Keys</string>
+    <string name="no_of_keys">No of Keys</string>
+    <string name="loading">Loading...</string>
+    <string name="generating">Generating...</string>
+    <string name="vendors">Vendors</string>
+    <string name="new_vendor">New Vendor</string>
+    <string name="vendor_name">Vendor name</string>
+    <string name="phone">Phone</string>
+    <string-array name="request_types">
+        <item>PENDING</item>
+        <item>APPROVED</item>
+        <item>DECLINED</item>
+    </string-array>
+    <string-array name="chip_items">
+        <item>ALL</item>
+        <item>CARD</item>
+        <item>KEY</item>
+        <item>FREETRIAL</item>
+    </string-array>
 </resources>

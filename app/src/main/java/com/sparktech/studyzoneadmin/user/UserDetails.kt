@@ -12,7 +12,8 @@ import com.sparktech.studyzoneadmin.databinding.UserDetailsLayoutBinding
 
 class UserDetails: Fragment() {
     private lateinit var binding:UserDetailsLayoutBinding
-    private val tabTitle = listOf("Downloads","Referrals","Transaction")
+    private val tabTitle = listOf("Referrals","Transaction")
+    private lateinit var vm:UsersViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,6 +40,8 @@ class UserDetails: Fragment() {
         val earnings = bundle.getString("earnings")
         val isLoggedIn = bundle.getBoolean("loggedIn")
         val isActivated = bundle.getBoolean("activated")
+        val user = bundle.getString("user","")
+        val isBlocked = bundle.getBoolean("isBlocked",false)
         binding.apply {
             userName.text = name
             phoneNo.text = phone
@@ -46,6 +49,13 @@ class UserDetails: Fragment() {
             moneyValue.text = earnings
             loggedInTxt.text = if(isLoggedIn)"LoggedIn" else "not loggedIn"
             activatedText.text = if(isActivated)"Activated" else "not Activated"
+            binding.userMoreFab.setOnClickListener {
+              parentFragmentManager.let {
+                  UserBottomSheet.getBottomSheet(user,isBlocked).apply {
+                      show(it,"userBottom")
+                  }
+              }
+            }
 
         }
     }

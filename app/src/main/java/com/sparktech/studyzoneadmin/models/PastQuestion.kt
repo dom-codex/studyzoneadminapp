@@ -8,5 +8,6 @@ data class PastQuestion(
     val endYear:String,
     @SerializedName("pid")
     val hash:String,
-    val createdAt:String
+    val createdAt:String,
+    val isLoading:Boolean = false
 )
